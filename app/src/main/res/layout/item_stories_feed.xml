@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <com.ritesh.ratiolayout.RatioRelativeLayout
+        android:id="@+id/activity_main_ratio"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        app:fixed_attribute="WIDTH"
+        app:horizontal_ratio="9"
+        android:layout_margin="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:vertical_ratio="16">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/card_stories"
+                app:cardCornerRadius="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:background="@color/ui_accent1"/>
+
+                <ProgressBar
+                    android:id="@+id/lottie_receiver"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_margin="8dp"
+                    android:layout_gravity="center"
+                    android:indeterminate="true"
+                    android:indeterminateTint="@color/ui_accent3"
+                    android:indeterminateTintMode="src_atop" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/image_story"
+                    android:scaleType="centerCrop"/>
+
+            </androidx.cardview.widget.CardView>
+
+    </com.ritesh.ratiolayout.RatioRelativeLayout>
+
+</LinearLayout>

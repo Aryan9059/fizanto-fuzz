@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragment.VideosFragment"
+    android:background="@color/back_light">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@color/back_light">
+
+            <com.ritesh.ratiolayout.RatioLinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:fixed_attribute="WIDTH"
+                app:horizontal_ratio="3.654846335697"
+                app:vertical_ratio="1">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/channel_poster"/>
+
+            </com.ritesh.ratiolayout.RatioLinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/back_light"
+                android:orientation="vertical">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="50dp"
+                    android:layout_margin="8dp"
+                    android:layout_gravity="center"
+                    android:layout_height="50dp"
+                    android:src="@drawable/fizanto_fuzz_logo"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Fizanto Fuzz"
+                        android:textSize="22sp"
+                        android:layout_gravity="center_horizontal"
+                        android:fontFamily="@font/gsb"
+                        android:textColor="@color/text_main"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="SUBSCRIBE"
+                        android:id="@+id/subscribe"
+                        android:layout_marginTop="2dp"
+                        android:textSize="13sp"
+                        android:layout_gravity="center_horizontal"
+                        android:textStyle="bold"
+                        android:textColor="@color/ui_accent3"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="115 subscribers · 16 videos"
+                        android:layout_marginTop="6dp"
+                        android:layout_gravity="center_horizontal"
+                        android:textSize="12sp"
+                        android:textColor="@color/text_main"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Buzzing Around You! Mainly featuring Aryan Srivastava and Prateek Sinha, Fizanto Fuzz offers a variety of content ranging from Comedy videos to Funny Gameplays! We have Official Accounts only on Instagram, Telegram, and Twitter. Get in touch with these accounts also."
+                        android:layout_marginTop="3dp"
+                        android:layout_gravity="center_horizontal"
+                        android:textSize="12sp"
+                        android:layout_marginBottom="15dp"
+                        android:gravity="center_horizontal"
+                        android:textColor="@color/text_sec"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <xyz.peridy.shimmerlayout.ShimmerLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/shimmer_video">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.ritesh.ratiolayout.RatioRelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:fixed_attribute="WIDTH"
+                    android:background="@color/shimmer"
+                    app:horizontal_ratio="16"
+                    app:vertical_ratio="9"/>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/back_light"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_margin="6dp"
+                        android:paddingTop="8dp"
+                        app:tint="@color/shimmer"
+                        android:layout_gravity="center"
+                        android:src="@drawable/fflogowhite"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:orientation="vertical">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="17dp"
+                            android:layout_marginTop="8dp"
+                            app:cardCornerRadius="5dp"
+                            app:cardElevation="0dp"
+                            app:cardBackgroundColor="@color/shimmer"
+                            android:layout_marginEnd="80dp"
+                            android:gravity="center_vertical"
+                            />
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="13dp"
+                            android:layout_marginTop="6dp"
+                            app:cardCornerRadius="5dp"
+                            app:cardElevation="0dp"
+                            app:cardBackgroundColor="@color/shimmer"
+                            android:layout_marginEnd="12dp"
+                            android:gravity="center_vertical"
+                            />
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="13dp"
+                            android:layout_marginTop="2dp"
+                            app:cardCornerRadius="5dp"
+                            app:cardElevation="0dp"
+                            app:cardBackgroundColor="@color/shimmer"
+                            android:layout_marginEnd="12dp"
+                            android:gravity="center_vertical"
+                            />
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="110dp"
+                            android:layout_height="13dp"
+                            app:cardBackgroundColor="@color/shimmer"
+                            app:cardElevation="0dp"
+                            android:layout_marginBottom="15dp"
+                            android:layout_marginRight="12dp"
+                            android:layout_gravity="right"
+                            app:cardCornerRadius="5dp"
+                            android:layout_marginTop="4dp"
+                            />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.ritesh.ratiolayout.RatioRelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:fixed_attribute="WIDTH"
+                        android:background="@color/shimmer"
+                        app:horizontal_ratio="16"
+                        app:vertical_ratio="9"/>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/back_light"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_margin="6dp"
+                            android:paddingTop="8dp"
+                            app:tint="@color/shimmer"
+                            android:layout_gravity="center"
+                            android:src="@drawable/fflogowhite"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:orientation="vertical">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="match_parent"
+                                android:layout_height="17dp"
+                                android:layout_marginTop="8dp"
+                                app:cardCornerRadius="5dp"
+                                app:cardElevation="0dp"
+                                app:cardBackgroundColor="@color/shimmer"
+                                android:layout_marginEnd="80dp"
+                                android:gravity="center_vertical"
+                                />
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="match_parent"
+                                android:layout_height="13dp"
+                                android:layout_marginTop="6dp"
+                                app:cardCornerRadius="5dp"
+                                app:cardElevation="0dp"
+                                app:cardBackgroundColor="@color/shimmer"
+                                android:layout_marginEnd="12dp"
+                                android:gravity="center_vertical"
+                                />
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="match_parent"
+                                android:layout_height="13dp"
+                                android:layout_marginTop="2dp"
+                                app:cardCornerRadius="5dp"
+                                app:cardElevation="0dp"
+                                app:cardBackgroundColor="@color/shimmer"
+                                android:layout_marginEnd="12dp"
+                                android:gravity="center_vertical"
+                                />
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="110dp"
+                                android:layout_height="13dp"
+                                app:cardBackgroundColor="@color/shimmer"
+                                app:cardElevation="0dp"
+                                android:layout_marginRight="12dp"
+                                android:layout_gravity="right"
+                                app:cardCornerRadius="5dp"
+                                android:layout_marginBottom="15dp"
+                                android:layout_marginTop="4dp"
+                                />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.ritesh.ratiolayout.RatioRelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:fixed_attribute="WIDTH"
+                        android:background="@color/shimmer"
+                        app:horizontal_ratio="16"
+                        app:vertical_ratio="9"/>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/back_light"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_margin="6dp"
+                            android:paddingTop="8dp"
+                            app:tint="@color/shimmer"
+                            android:layout_gravity="center"
+                            android:src="@drawable/fflogowhite"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:orientation="vertical">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="match_parent"
+                                android:layout_height="17dp"
+                                android:layout_marginTop="8dp"
+                                app:cardCornerRadius="5dp"
+                                app:cardElevation="0dp"
+                                app:cardBackgroundColor="@color/shimmer"
+                                android:layout_marginEnd="80dp"
+                                android:gravity="center_vertical"
+                                />
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="match_parent"
+                                android:layout_height="13dp"
+                                android:layout_marginTop="6dp"
+                                app:cardCornerRadius="5dp"
+                                app:cardElevation="0dp"
+                                app:cardBackgroundColor="@color/shimmer"
+                                android:layout_marginEnd="12dp"
+                                android:gravity="center_vertical"
+                                />
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="match_parent"
+                                android:layout_height="13dp"
+                                android:layout_marginTop="2dp"
+                                app:cardCornerRadius="5dp"
+                                app:cardElevation="0dp"
+                                app:cardBackgroundColor="@color/shimmer"
+                                android:layout_marginEnd="12dp"
+                                android:gravity="center_vertical"
+                                />
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="110dp"
+                                android:layout_height="13dp"
+                                app:cardBackgroundColor="@color/shimmer"
+                                app:cardElevation="0dp"
+                                android:layout_marginBottom="15dp"
+                                android:layout_marginRight="12dp"
+                                android:layout_gravity="right"
+                                app:cardCornerRadius="5dp"
+                                android:layout_marginTop="4dp"
+                                />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+        </LinearLayout>
+
+            </xyz.peridy.shimmerlayout.ShimmerLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#00ffffff"
+                android:visibility="gone">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                android:id="@+id/swipeRefresh"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</FrameLayout>

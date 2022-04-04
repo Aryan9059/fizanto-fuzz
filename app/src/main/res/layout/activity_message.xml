@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/rootview"
+    android:layout_height="match_parent"
+    android:background="@color/back_light"
+    tools:context=".Activity.MessageActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/bar_layout"
+        android:background="@color/ui_accent1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:gravity="center_vertical"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:popupTheme="@style/MenuStyle">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_arrow_back_white_24dp"
+                app:tint="@color/ui_accent3"
+                android:id="@+id/back_mess"
+                android:layout_marginRight="5dp"/>
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profile_image"
+                android:layout_width="37dp"
+                android:layout_height="37dp"
+                android:src="@drawable/picsign" />
+
+            <TextView
+                android:id="@+id/username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:textColor="@color/ui_accent3"
+                android:fontFamily="@font/gsb"
+                android:textSize="17sp" />
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:id="@+id/card_progress"
+        app:cardElevation="8dp"
+        app:cardCornerRadius="13dp"
+        app:cardBackgroundColor="@color/ui_accent3"
+        android:layout_centerInParent="true">
+
+        <ProgressBar
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:indeterminateTint="@color/ui_accent1"
+            android:indeterminateTintMode="src_atop"
+            android:padding="15dp" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottom"
+        android:layout_below="@id/bar_layout"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/ui_accent1"
+        android:padding="4dp">
+
+        <LinearLayout
+            android:id="@+id/lin_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <ImageView
+                android:id="@+id/emojipng"
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:clickable="true"
+                android:padding="5dp"
+                android:src="@drawable/icon_emoji"
+                app:tint="@color/ui_accent3" />
+
+            <ImageView
+                android:id="@+id/imageButton"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:padding="6dp"
+                android:src="@drawable/icon_add_image"
+                app:tint="@color/ui_accent3" />
+
+        </LinearLayout>
+
+        <com.vanniktech.emoji.EmojiEditText
+            android:id="@+id/text_send"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/edttextround"
+            android:hint="Type a Message.."
+            android:inputType="textMultiLine"
+            android:maxLines="5"
+            android:padding="10dp"
+            android:textColor="@color/text_main"
+            android:textColorHint="@color/text_sec"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btn_send"
+            app:layout_constraintStart_toEndOf="@id/lin_btn" />
+
+        <ImageView
+            android:id="@+id/btn_send"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_marginRight="3dp"
+            android:padding="4dp"
+            android:src="@drawable/icon_send"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:tint="@color/ui_accent3" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</RelativeLayout>

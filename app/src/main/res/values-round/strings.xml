@@ -1,0 +1,7 @@
+<resources>
+
+    <string name="hello_world">Hello Round World!</string>
+    <string name="action_settings">Settings</string>
+    <string name="app_name">Analog Clock</string>
+
+</resources>

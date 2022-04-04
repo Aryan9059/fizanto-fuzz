@@ -1,0 +1,21 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/Widget2"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center">
+
+    <AnalogClock
+        android:id="@+id/AnalogClock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:dial="@drawable/dial"
+        android:dialTint="@color/dial"
+        android:hand_hour="@drawable/hour"
+        android:hand_hourTint="@color/hour"
+        android:hand_minute="@drawable/minute"
+        android:hand_minuteTint="@color/minute"
+        android:hand_second="@drawable/second"
+        android:hand_secondTint="@color/second" />
+
+</RelativeLayout>

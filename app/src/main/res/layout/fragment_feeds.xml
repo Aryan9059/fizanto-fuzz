@@ -1,0 +1,545 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragment.FeedsFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".FeedsActivity"
+        android:background="@color/back_light">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="STORIES"
+                        android:paddingLeft="16dp"
+                        android:paddingTop="14dp"
+                        android:textColor="@color/ui_accent3"
+                        android:fontFamily="@font/gsb"
+                        android:textSize="16sp" />
+
+                    <xyz.peridy.shimmerlayout.ShimmerLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/shimmer1">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                        <com.ritesh.ratiolayout.RatioRelativeLayout
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content"
+                            app:fixed_attribute="WIDTH"
+                            app:horizontal_ratio="9"
+                            android:layout_margin="8dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:vertical_ratio="16">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                app:cardBackgroundColor="@color/shimmer"
+                                app:cardCornerRadius="8dp">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:layout_gravity="bottom"
+                                    android:gravity="center_vertical">
+
+                                    <androidx.cardview.widget.CardView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="10dp"
+                                        app:cardCornerRadius="4dp"
+                                        app:cardBackgroundColor="@color/back_light"
+                                        app:cardElevation="0dp"
+                                        android:layout_marginLeft="12dp"
+                                        android:layout_marginRight="20dp"/>
+
+                                    <androidx.cardview.widget.CardView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="10dp"
+                                        app:cardCornerRadius="4dp"
+                                        app:cardBackgroundColor="@color/back_light"
+                                        android:layout_marginTop="3dp"
+                                        app:cardElevation="0dp"
+                                        android:layout_marginLeft="12dp"
+                                        android:layout_marginRight="60dp"/>
+
+                                    <androidx.cardview.widget.CardView
+                                        android:layout_width="60dp"
+                                        android:layout_height="6dp"
+                                        app:cardCornerRadius="2dp"
+                                        app:cardBackgroundColor="@color/back_light"
+                                        android:layout_marginBottom="10dp"
+                                        android:layout_marginTop="5dp"
+                                        app:cardElevation="0dp"
+                                        android:layout_marginLeft="12dp"
+                                        />
+
+                                </LinearLayout>
+
+                            </androidx.cardview.widget.CardView>
+
+                        </com.ritesh.ratiolayout.RatioRelativeLayout>
+
+                        <com.ritesh.ratiolayout.RatioRelativeLayout
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content"
+                            app:fixed_attribute="WIDTH"
+                            app:horizontal_ratio="9"
+                            android:layout_margin="8dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:vertical_ratio="16">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                app:cardBackgroundColor="@color/shimmer"
+                                app:cardCornerRadius="8dp">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:layout_gravity="bottom"
+                                    android:gravity="center_vertical">
+
+                                    <androidx.cardview.widget.CardView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="10dp"
+                                        app:cardCornerRadius="4dp"
+                                        app:cardBackgroundColor="@color/back_light"
+                                        app:cardElevation="0dp"
+                                        android:layout_marginLeft="12dp"
+                                        android:layout_marginRight="20dp"/>
+
+                                    <androidx.cardview.widget.CardView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="10dp"
+                                        app:cardCornerRadius="4dp"
+                                        app:cardBackgroundColor="@color/back_light"
+                                        android:layout_marginTop="3dp"
+                                        app:cardElevation="0dp"
+                                        android:layout_marginLeft="12dp"
+                                        android:layout_marginRight="60dp"/>
+
+                                    <androidx.cardview.widget.CardView
+                                        android:layout_width="60dp"
+                                        android:layout_height="6dp"
+                                        app:cardCornerRadius="2dp"
+                                        app:cardBackgroundColor="@color/back_light"
+                                        android:layout_marginBottom="10dp"
+                                        android:layout_marginTop="5dp"
+                                        app:cardElevation="0dp"
+                                        android:layout_marginLeft="12dp"
+                                        />
+
+                                </LinearLayout>
+
+                            </androidx.cardview.widget.CardView>
+
+                        </com.ritesh.ratiolayout.RatioRelativeLayout>
+
+                            <com.ritesh.ratiolayout.RatioRelativeLayout
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                app:fixed_attribute="WIDTH"
+                                app:horizontal_ratio="9"
+                                android:layout_margin="8dp"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:vertical_ratio="16">
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    app:cardBackgroundColor="@color/shimmer"
+                                    app:cardCornerRadius="8dp">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="bottom"
+                                        android:gravity="center_vertical"
+                                        android:orientation="vertical">
+
+                                        <androidx.cardview.widget.CardView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="10dp"
+                                            android:layout_marginLeft="12dp"
+                                            android:layout_marginRight="20dp"
+                                            app:cardBackgroundColor="@color/back_light"
+                                            app:cardCornerRadius="4dp"
+                                            app:cardElevation="0dp" />
+
+                                        <androidx.cardview.widget.CardView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="10dp"
+                                            android:layout_marginLeft="12dp"
+                                            android:layout_marginTop="3dp"
+                                            android:layout_marginRight="60dp"
+                                            app:cardBackgroundColor="@color/back_light"
+                                            app:cardCornerRadius="4dp"
+                                            app:cardElevation="0dp" />
+
+                                        <androidx.cardview.widget.CardView
+                                            android:layout_width="60dp"
+                                            android:layout_height="6dp"
+                                            android:layout_marginLeft="12dp"
+                                            android:layout_marginTop="5dp"
+                                            android:layout_marginBottom="10dp"
+                                            app:cardBackgroundColor="@color/back_light"
+                                            app:cardCornerRadius="2dp"
+                                            app:cardElevation="0dp" />
+
+                                    </LinearLayout>
+
+                                </androidx.cardview.widget.CardView>
+
+                            </com.ritesh.ratiolayout.RatioRelativeLayout>
+
+                        </LinearLayout>
+
+                    </xyz.peridy.shimmerlayout.ShimmerLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/feed_stories"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        android:padding="8dp"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="UPDATES"
+                        android:fontFamily="@font/gsb"
+                        android:textColor="@color/ui_accent3"
+                        android:textSize="16sp"
+                        android:paddingLeft="16dp" />
+
+                    <xyz.peridy.shimmerlayout.ShimmerLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/shimmer2"
+                        >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:gravity="center_vertical">
+
+                            <com.ritesh.ratiolayout.RatioLinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                app:fixed_attribute="WIDTH"
+                                android:background="@color/shimmer"
+                                app:horizontal_ratio="16"
+                                app:vertical_ratio="9"/>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="4dp"
+                                android:paddingRight="4dp"
+                                android:paddingLeft="6dp"
+                                android:orientation="vertical">
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="20dp"
+                                    app:cardElevation="0dp"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginRight="90dp"
+                                    app:cardBackgroundColor="@color/shimmer"
+                                    app:cardCornerRadius="5dp"
+                                    android:layout_marginBottom="4dp"/>
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="15dp"
+                                    app:cardElevation="0dp"
+                                    android:layout_marginRight="20dp"
+                                    app:cardBackgroundColor="@color/shimmer"
+                                    app:cardCornerRadius="4dp"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginBottom="2dp"/>
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="200dp"
+                                    android:layout_height="15dp"
+                                    app:cardElevation="0dp"
+                                    app:cardBackgroundColor="@color/shimmer"
+                                    app:cardCornerRadius="4dp"
+                                    android:layout_marginTop="1dp"
+                                    android:layout_marginBottom="2dp"/>
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="70dp"
+                                    android:layout_height="12dp"
+                                    app:cardElevation="0dp"
+                                    android:layout_gravity="right"
+                                    app:cardBackgroundColor="@color/shimmer"
+                                    app:cardCornerRadius="2dp"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginBottom="13dp"/>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:gravity="center_vertical">
+
+                                <com.ritesh.ratiolayout.RatioLinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    app:fixed_attribute="WIDTH"
+                                    android:background="@color/shimmer"
+                                    app:horizontal_ratio="16"
+                                    app:vertical_ratio="9"/>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="4dp"
+                                    android:paddingRight="4dp"
+                                    android:paddingLeft="6dp"
+                                    android:orientation="vertical">
+
+                                    <androidx.cardview.widget.CardView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="20dp"
+                                        app:cardElevation="0dp"
+                                        android:layout_marginTop="5dp"
+                                        android:layout_marginRight="90dp"
+                                        app:cardBackgroundColor="@color/shimmer"
+                                        app:cardCornerRadius="5dp"
+                                        android:layout_marginBottom="4dp"/>
+
+                                    <androidx.cardview.widget.CardView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="15dp"
+                                        app:cardElevation="0dp"
+                                        android:layout_marginRight="20dp"
+                                        app:cardBackgroundColor="@color/shimmer"
+                                        app:cardCornerRadius="4dp"
+                                        android:layout_marginTop="5dp"
+                                        android:layout_marginBottom="2dp"/>
+
+                                    <androidx.cardview.widget.CardView
+                                        android:layout_width="200dp"
+                                        android:layout_height="15dp"
+                                        app:cardElevation="0dp"
+                                        app:cardBackgroundColor="@color/shimmer"
+                                        app:cardCornerRadius="4dp"
+                                        android:layout_marginTop="1dp"
+                                        android:layout_marginBottom="2dp"/>
+
+                                    <androidx.cardview.widget.CardView
+                                        android:layout_width="70dp"
+                                        android:layout_height="12dp"
+                                        app:cardElevation="0dp"
+                                        android:layout_gravity="right"
+                                        app:cardBackgroundColor="@color/shimmer"
+                                        app:cardCornerRadius="2dp"
+                                        android:layout_marginTop="5dp"
+                                        android:layout_marginBottom="13dp"/>
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:gravity="center_vertical">
+
+                                <com.ritesh.ratiolayout.RatioLinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    app:fixed_attribute="WIDTH"
+                                    android:background="@color/shimmer"
+                                    app:horizontal_ratio="16"
+                                    app:vertical_ratio="9"/>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="4dp"
+                                    android:paddingRight="4dp"
+                                    android:paddingLeft="6dp"
+                                    android:orientation="vertical">
+
+                                    <androidx.cardview.widget.CardView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="20dp"
+                                        app:cardElevation="0dp"
+                                        android:layout_marginTop="5dp"
+                                        android:layout_marginRight="90dp"
+                                        app:cardBackgroundColor="@color/shimmer"
+                                        app:cardCornerRadius="5dp"
+                                        android:layout_marginBottom="4dp"/>
+
+                                    <androidx.cardview.widget.CardView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="15dp"
+                                        app:cardElevation="0dp"
+                                        android:layout_marginRight="20dp"
+                                        app:cardBackgroundColor="@color/shimmer"
+                                        app:cardCornerRadius="4dp"
+                                        android:layout_marginTop="5dp"
+                                        android:layout_marginBottom="2dp"/>
+
+                                    <androidx.cardview.widget.CardView
+                                        android:layout_width="200dp"
+                                        android:layout_height="15dp"
+                                        app:cardElevation="0dp"
+                                        app:cardBackgroundColor="@color/shimmer"
+                                        app:cardCornerRadius="4dp"
+                                        android:layout_marginTop="1dp"
+                                        android:layout_marginBottom="2dp"/>
+
+                                    <androidx.cardview.widget.CardView
+                                        android:layout_width="70dp"
+                                        android:layout_height="12dp"
+                                        app:cardElevation="0dp"
+                                        android:layout_gravity="right"
+                                        app:cardBackgroundColor="@color/shimmer"
+                                        app:cardCornerRadius="2dp"
+                                        android:layout_marginTop="5dp"
+                                        android:layout_marginBottom="13dp"/>
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:gravity="center_vertical">
+
+                                <com.ritesh.ratiolayout.RatioLinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    app:fixed_attribute="WIDTH"
+                                    android:background="@color/shimmer"
+                                    app:horizontal_ratio="16"
+                                    app:vertical_ratio="9"/>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="4dp"
+                                    android:paddingRight="4dp"
+                                    android:paddingLeft="6dp"
+                                    android:orientation="vertical">
+
+                                    <androidx.cardview.widget.CardView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="20dp"
+                                        app:cardElevation="0dp"
+                                        android:layout_marginTop="5dp"
+                                        android:layout_marginRight="90dp"
+                                        app:cardBackgroundColor="@color/shimmer"
+                                        app:cardCornerRadius="5dp"
+                                        android:layout_marginBottom="4dp"/>
+
+                                    <androidx.cardview.widget.CardView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="15dp"
+                                        app:cardElevation="0dp"
+                                        android:layout_marginRight="20dp"
+                                        app:cardBackgroundColor="@color/shimmer"
+                                        app:cardCornerRadius="4dp"
+                                        android:layout_marginTop="5dp"
+                                        android:layout_marginBottom="2dp"/>
+
+                                    <androidx.cardview.widget.CardView
+                                        android:layout_width="200dp"
+                                        android:layout_height="15dp"
+                                        app:cardElevation="0dp"
+                                        app:cardBackgroundColor="@color/shimmer"
+                                        app:cardCornerRadius="4dp"
+                                        android:layout_marginTop="1dp"
+                                        android:layout_marginBottom="2dp"/>
+
+                                    <androidx.cardview.widget.CardView
+                                        android:layout_width="70dp"
+                                        android:layout_height="12dp"
+                                        app:cardElevation="0dp"
+                                        android:layout_gravity="right"
+                                        app:cardBackgroundColor="@color/shimmer"
+                                        app:cardCornerRadius="2dp"
+                                        android:layout_marginTop="5dp"
+                                        android:layout_marginBottom="13dp"/>
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </xyz.peridy.shimmerlayout.ShimmerLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/feed_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        android:layout_marginTop="16dp"
+                        />
+
+                </LinearLayout>
+
+            </androidx.core.widget.NestedScrollView>
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

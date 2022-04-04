@@ -1,0 +1,79 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.Material3.Dark.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/ui_accent3</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/ui_accent3</item>
+        <item name="android:navigationBarColor">@color/ui_accent1</item>
+        <item name="android:windowContentTransitions">true</item>
+        <item name="material_dialog_background">@color/back_dark</item>
+        <item name="material_dialog_title_text_color">@color/text_main</item>
+        <item name="material_dialog_message_text_color">@color/text_sec</item>
+        <item name="material_dialog_positive_button_color">@color/ui_accent3</item>
+        <item name="material_dialog_positive_button_text_color">@color/back_dark</item>
+        <item name="materialCircleRadius">20dp</item>
+        <item name="material_dialog_negative_button_text_color">@color/ui_accent3</item>
+    </style>
+
+    <style name="AppThemeNavigation" parent="Theme.Material3.Dark.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/ui_accent3</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/ui_accent3</item>
+        <item name="android:navigationBarColor">#000</item>
+        <item name="android:windowContentTransitions">true</item>
+        <item name="material_dialog_background">@color/back_dark</item>
+        <item name="material_dialog_title_text_color">@color/text_main</item>
+        <item name="material_dialog_message_text_color">@color/text_sec</item>
+        <item name="material_dialog_positive_button_color">@color/ui_accent3</item>
+        <item name="material_dialog_positive_button_text_color">@color/back_dark</item>
+        <item name="materialCircleRadius">20dp</item>
+        <item name="material_dialog_negative_button_text_color">@color/ui_accent3</item>
+    </style>
+
+    <style name="Theme.HomeScreen" parent="android:Theme.DeviceDefault.Light.NoActionBar.Fullscreen">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="colorPrimary">#ffffff</item>
+    </style>
+
+    <style name="Exoplayer" parent="Theme.Material3.Dark.NoActionBar">
+        <item name="android:colorPrimaryDark">#000000</item>
+    </style>
+
+    <style name="Widget.App.BottomNavigationView" parent="Widget.Material3.BottomNavigationView">
+        <item name="materialThemeOverlay">@style/ThemeOverlay.App.BottomNavigationView</item>
+    </style>
+
+    <style name="ThemeOverlay.App.BottomNavigationView" parent="">
+        <item name="colorSurface">@color/ui_accent1</item>
+        <item name="android:fontFamily">@font/gsr</item>
+        <item name="colorOnSurfaceVariant">@color/ui_accent3</item>
+        <item name="itemActiveIndicatorStyle">
+            @style/Widget.Material3.BottomNavigationView.ActiveIndicator
+        </item>
+    </style>
+
+    <style name="Widget.Material3.BottomNavigationView.ActiveIndicator" parent="">
+        <item name="android:width">@dimen/m3_bottom_nav_item_active_indicator_width</item>
+        <item name="android:height">@dimen/m3_bottom_nav_item_active_indicator_height</item>
+        <item name="marginHorizontal">@dimen/m3_bottom_nav_item_active_indicator_margin_horizontal
+        </item>
+        <item name="shapeAppearance">
+            @style/ShapeAppearance.Material3.NavigationBarView.ActiveIndicator
+        </item>
+        <item name="android:color">@color/ui_accent3</item>
+    </style>
+
+    <style name="clock">
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">fill_parent</item>
+    </style>
+    <style name="alarm_alert" parent="@android:style/Theme.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+</resources>
