@@ -28,7 +28,7 @@
                 app:elevation="4dp"
                 android:elevation="4dp"
                 android:layout_marginBottom="8dp"
-                android:src="@drawable/ic_edit"
+                android:src="@drawable/icon_edit"
                 app:backgroundTint="@color/ui_accent3"
                 app:tint="@color/ui_accent1" />
 

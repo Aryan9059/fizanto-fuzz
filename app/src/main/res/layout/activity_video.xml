@@ -167,7 +167,7 @@
                             android:layout_weight="1"
                             android:fontFamily="@font/gsm"
                             android:gravity="center"
-                            android:text="N/A"
+                            android:text="1"
                             android:textColor="@color/ui_accent3" />
 
                         <ImageView
@@ -216,7 +216,7 @@
                             android:ems="10"
                             android:drawableTint="@color/ui_accent3"
                             android:drawablePadding="5dp"
-                            android:drawableLeft="@drawable/round_question_answer_24"
+                            android:drawableLeft="@drawable/icon_chat_et"
                             android:hint="Type your comment..."
                             android:inputType="textMultiLine"
                             android:padding="10dp"

@@ -80,7 +80,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="115 subscribers · 16 videos"
+                        android:text="112 subscribers · 16 videos"
                         android:layout_marginTop="6dp"
                         android:layout_gravity="center_horizontal"
                         android:textSize="12sp"
@@ -134,10 +134,9 @@
                     <ImageView
                         android:layout_width="50dp"
                         android:layout_height="50dp"
-                        android:layout_margin="6dp"
+                        android:layout_marginHorizontal="6dp"
                         android:paddingTop="8dp"
                         app:tint="@color/shimmer"
-                        android:layout_gravity="center"
                         android:src="@drawable/fflogowhite"/>
 
                     <LinearLayout
@@ -220,10 +219,9 @@
                         <ImageView
                             android:layout_width="50dp"
                             android:layout_height="50dp"
-                            android:layout_margin="6dp"
+                            android:layout_marginHorizontal="6dp"
                             android:paddingTop="8dp"
                             app:tint="@color/shimmer"
-                            android:layout_gravity="center"
                             android:src="@drawable/fflogowhite"/>
 
                         <LinearLayout
@@ -306,10 +304,9 @@
                         <ImageView
                             android:layout_width="50dp"
                             android:layout_height="50dp"
-                            android:layout_margin="6dp"
+                            android:layout_marginHorizontal="6dp"
                             android:paddingTop="8dp"
                             app:tint="@color/shimmer"
-                            android:layout_gravity="center"
                             android:src="@drawable/fflogowhite"/>
 
                         <LinearLayout

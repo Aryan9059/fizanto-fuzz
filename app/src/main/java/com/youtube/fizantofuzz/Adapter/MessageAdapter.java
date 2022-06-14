@@ -102,7 +102,7 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.ViewHold
                                         dialogInterface.dismiss();
                                         Toast.makeText(mContext, "Deleted successfully", Toast.LENGTH_SHORT).show();
                                     }
-                                }).setNegativeButton("Cancel", R.drawable.ic_outline_cancel_24, new MaterialDialog.OnClickListener() {
+                                }).setNegativeButton("Cancel", R.drawable.icon_cancel, new MaterialDialog.OnClickListener() {
                                     @Override
                                     public void onClick(DialogInterface dialogInterface, int which) {
                                         dialogInterface.dismiss();
@@ -129,6 +129,7 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.ViewHold
                     intent.putExtra("images", chat.getMessage());
                     intent.putExtra("date", holder.convertTime(chat.getTime()));
                     intent.putExtra("name", chat.getName());
+                    intent.putExtra("imgname", chat.getImgname());
                     Pair[] pairs = new Pair[1];
                     pairs[0] = new Pair<View, String>(holder.show_pic, "image_show");
                     ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation((Activity) mContext, pairs);
@@ -154,7 +155,7 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.ViewHold
                                         dialogInterface.dismiss();
                                         Toast.makeText(mContext, "Deleted successfully", Toast.LENGTH_SHORT).show();
                                     }
-                                }).setNegativeButton("Cancel", R.drawable.ic_outline_cancel_24, new MaterialDialog.OnClickListener() {
+                                }).setNegativeButton("Cancel", R.drawable.icon_cancel, new MaterialDialog.OnClickListener() {
                                     @Override
                                     public void onClick(DialogInterface dialogInterface, int which) {
                                         dialogInterface.dismiss();

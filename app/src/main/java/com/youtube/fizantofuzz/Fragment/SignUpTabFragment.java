@@ -12,11 +12,13 @@ import android.webkit.MimeTypeMap;
 import android.widget.TextView;
 import android.widget.Toast;
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.Fragment;
 import com.google.android.gms.tasks.Continuation;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.Task;
+import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
@@ -30,7 +32,6 @@ import com.youtube.fizantofuzz.R;
 import com.youtube.fizantofuzz.Activity.HomeActivity;
 import java.util.HashMap;
 import de.hdodenhof.circleimageview.CircleImageView;
-import io.github.pierry.progress.Progress;
 import static android.app.Activity.RESULT_OK;
 
 public class SignUpTabFragment extends Fragment {
@@ -43,7 +44,6 @@ public class SignUpTabFragment extends Fragment {
     StorageReference storageReference;
     private Uri imageUri;
     private static final int IMAGE_REQUEST = 1;
-    private Progress dialoglogin;
     private FirebaseAuth mauth;
     String mUri;
     DatabaseReference mbase;
@@ -108,7 +108,7 @@ public class SignUpTabFragment extends Fragment {
 
     private void uploadImage(){
         final ProgressDialog pd = new ProgressDialog(getContext());
-        pd.setIndeterminateDrawable(getResources().getDrawable(R.drawable.ic_picture));
+        pd.setIndeterminateDrawable(getResources().getDrawable(R.drawable.icon_upload));
 
         pd.setMessage("Uploading...");
         pd.show();
@@ -156,8 +156,14 @@ public class SignUpTabFragment extends Fragment {
     }
 
     private void CreateUserAccount() {
-        dialoglogin = new Progress(getActivity());
-        dialoglogin.light("Signing you up!");
+
+        MaterialAlertDialogBuilder dialogBuilder = new MaterialAlertDialogBuilder(getContext());
+        dialogBuilder.setView(R.layout.progress_material)
+                .setCancelable(false).create();
+
+        AlertDialog materialDialogs = dialogBuilder.create();
+        materialDialogs.show();
+
         mauth.createUserWithEmailAndPassword(email.getText().toString(), password.getText().toString()).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
@@ -178,7 +184,7 @@ public class SignUpTabFragment extends Fragment {
                             if (task1.isSuccessful()){
                                 Intent home = new Intent(getActivity(), HomeActivity.class);
                                 Toast.makeText(getContext(), "Signed in successfully", Toast.LENGTH_SHORT).show();
-                                dialoglogin.dismiss();
+                                materialDialogs.dismiss();
                                 FirebaseAuth.getInstance().getCurrentUser().sendEmailVerification().addOnCompleteListener(new OnCompleteListener<Void>() {
                                     @Override
                                     public void onComplete(@NonNull Task<Void> task) {
@@ -190,14 +196,14 @@ public class SignUpTabFragment extends Fragment {
                                 });
                             } else {
                                 Toast.makeText(getContext(), "Sign in unsuccessful. " + task1.getException() + "", Toast.LENGTH_LONG).show();
-                                dialoglogin.dismiss();
+                                materialDialogs.dismiss();
                             }
                         }
                     });
                 }
                 else {
                     Toast.makeText(getContext(), "Sign in unsuccessful. " + task.getException() + "", Toast.LENGTH_LONG).show();
-                    dialoglogin.dismiss();
+                    materialDialogs.dismiss();
                 }
             }
         });

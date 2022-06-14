@@ -1,28 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#ffd6e3</color>
-    <color name="colorPrimaryDark">#ffd6e3</color>
-    <color name="colorAccent">#c53779</color>
+    <color name="colorPrimary">#ffd9e5</color>
+    <color name="colorPrimaryDark">#ffd9e5</color>
+    <color name="colorAccent">#8f4763</color>
     <color name="urlColor">#3E81F1</color>
     <color name="prePrimary">#f791ab</color>
     <color name="postPrimary">#a2125c</color>
+    <color name="black">#000</color>
     <color name="text_main">#E6000000</color>
     <color name="text_sec">#9A000000</color>
-    <color name="back_light">#fffbfc</color>
+    <color name="back_light">#fff</color>
     <color name="navigation">#FFFFFF</color>
     <color name="btn_some">#ed2165</color>
-    <color name="back_dark">#fbecf1</color>
+    <color name="back_dark">#fff</color>
+    <color name="chat_dark">#E0E0E0</color>
     <color name="specimen">#E0E0E0</color>
     <color name="shimmer">#CACACA</color>
     <color name="divider">#e0e0e0</color>
     <color name="back_pro">#80000000</color>
 
     <color name="bg_back">#fff</color>
-    <color name="bg_text">#191C1E</color>
-    <color name="bg_text_sec">#393D40</color>
-    <color name="ui_accent1">#ffd6e3</color>
-    <color name="ui_accent2">#ffaac8</color>
-    <color name="ui_accent3">#c53779</color>
+    <color name="bg_text">#E6000000</color>
+    <color name="bg_text_sec">#9A000000</color>
+    <color name="ui_accent1">#ffd9e5</color>
+    <color name="ui_accent2">#e891b0</color>
+    <color name="ui_accent3">#8f4763</color>
     <color name="indicator">#E481A9</color>
 
     <color name="splash1">#f791ab</color>
@@ -31,7 +33,7 @@
 
     <color name="dial">#ffebf1</color>
     <color name="hour">#583e47</color>
-    <color name="minute">#c53779</color>
+    <color name="minute">#8f4763</color>
     <color name="second">#a26b45</color>
     <color name="launcher_fg">#EFC6D0</color>
     <color name="launcher_bg">#bd004e</color>

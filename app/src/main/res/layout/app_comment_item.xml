@@ -73,12 +73,12 @@
 
             <ImageView
                 android:id="@+id/image_delete"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
                 android:layout_gravity="center"
+                android:visibility="gone"
                 app:tint="@color/ui_accent3"
                 android:layout_margin="8dp"
-                android:visibility="gone"
                 android:src="@drawable/ic_baseline_delete_24"
                 />
 

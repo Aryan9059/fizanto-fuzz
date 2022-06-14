@@ -25,6 +25,8 @@
         android:layout_height="wrap_content"
         android:layout_toRightOf="@id/profile_image"
         android:id="@+id/show_message"
+        android:textColorLink="@color/ui_accent3"
+        android:autoLink="all"
         android:layout_marginTop="4dp"
         android:layout_marginRight="10dp"
         android:layout_marginLeft="5dp"

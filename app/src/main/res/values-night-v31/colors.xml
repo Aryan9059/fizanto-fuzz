@@ -5,13 +5,13 @@
     <color name="colorPrimaryDark">@android:color/system_accent2_800</color>
     <color name="colorAccent">@android:color/system_accent2_800</color>
 
-    <color name="back_light">@android:color/system_neutral1_900</color>
-    <color name="back_dark">@android:color/system_neutral1_800</color>
-    <color name="bg_text">@android:color/system_neutral1_50</color>
-    <color name="bg_text_sec">@android:color/system_neutral1_400</color>
+    <color name="back_light">#000</color>
+    <color name="back_dark">#FF2E2E2E</color>
+    <color name="bg_text">#E6ffffff</color>
+    <color name="bg_text_sec">#9AFFFFFF</color>
     <color name="ui_accent1">@android:color/system_accent2_800</color>
     <color name="ui_accent2">@android:color/system_accent2_600</color>
-    <color name="ui_accent3">@android:color/system_accent2_300</color>
+    <color name="ui_accent3">@android:color/system_accent2_200</color>
     <color name="indicator">@android:color/system_accent2_500</color>
     <color name="shimmer">@android:color/system_neutral1_800</color>
 

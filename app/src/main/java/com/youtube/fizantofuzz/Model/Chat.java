@@ -10,8 +10,9 @@ public class Chat {
     private String name;
     private String type;
     private String root;
+    private String imgname;
 
-    public Chat(String sender, String receiver, String message, boolean isseen, String time, String name, String type, String root) {
+    public Chat(String sender, String receiver, String message, boolean isseen, String time, String name, String type, String root, String imgname) {
         this.sender = sender;
         this.receiver = receiver;
         this.message = message;
@@ -20,9 +21,18 @@ public class Chat {
         this.name = name;
         this.type = type;
         this.root = root;
+        this.imgname = imgname;
     }
 
     public Chat() {
+    }
+
+    public String getImgname() {
+        return imgname;
+    }
+
+    public void setImgname(String imgname) {
+        this.imgname = imgname;
     }
 
     public String getSender() {

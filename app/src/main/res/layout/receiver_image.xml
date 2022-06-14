@@ -19,17 +19,17 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_margin="8dp"
+            android:layout_margin="5dp"
             android:gravity="center_vertical">
 
         <TextView
             android:id="@+id/receiverchatname_img"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/gsb"
+            android:fontFamily="@font/gsm"
             android:text="Username"
             android:textColor="@color/ui_accent3"
-            android:textSize="14sp" />
+            android:textSize="12sp" />
 
         </LinearLayout>
 
@@ -38,11 +38,11 @@
             android:layout_width="180dp"
             android:layout_height="wrap_content"
             app:cardCornerRadius="10dp"
-            card_view:cardElevation="1dp"
+            app:cardElevation="0dp"
             app:cardBackgroundColor="@color/back_light"
-            android:layout_marginRight="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginBottom="8dp">
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginBottom="5dp">
 
             <ProgressBar
                 android:id="@+id/lottie_recieverimg"

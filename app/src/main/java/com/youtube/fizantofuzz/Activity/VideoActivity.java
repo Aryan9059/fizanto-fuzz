@@ -50,7 +50,6 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
-import io.github.pierry.progress.Progress;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -65,7 +64,6 @@ public class VideoActivity extends AppCompatActivity {
     CommentsAdapter commentsAdapter;
     RecyclerView commentsRecyclerView, appRecyclerView;
     RecyclerView.Adapter adapter;
-    Progress dialog;
     private List<ListItem> listItems;
     ImageView appCommentButton, collapse_btn;
     EditText appCommentText;
@@ -100,7 +98,6 @@ public class VideoActivity extends AppCompatActivity {
         dislikes = findViewById(R.id.dislikes);
         appRecyclerView = findViewById(R.id.appComment);
         appRecyclerView.setHasFixedSize(true);
-        dialog = new Progress(VideoActivity.this);
         appRecyclerView.setLayoutManager(new LinearLayoutManager(this));
         listItems = new ArrayList<>();
         commentsRecyclerView = findViewById(R.id.commentsRecyclerView);
@@ -311,7 +308,7 @@ public class VideoActivity extends AppCompatActivity {
 
     private void initPictureInPicture(YouTubePlayerView youTubePlayerView) {
         ImageView pictureInPictureView = new ImageView(this);
-        pictureInPictureView.setImageDrawable(ContextCompat.getDrawable(this, R.drawable.ic_picture_in_picture_24));
+        pictureInPictureView.setImageDrawable(ContextCompat.getDrawable(this, R.drawable.icon_pip));
 
         pictureInPictureView.setOnClickListener( view -> {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {

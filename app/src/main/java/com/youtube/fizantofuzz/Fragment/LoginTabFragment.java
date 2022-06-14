@@ -14,20 +14,19 @@ import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.youtube.fizantofuzz.R;
 import com.youtube.fizantofuzz.Activity.HomeActivity;
-import io.github.pierry.progress.Progress;
 
 public class LoginTabFragment extends Fragment {
 
     private TextInputEditText email, password;
     private TextInputLayout email_parent, password_parent;
     private TextView login, forgot;
-    private Progress dialoglogin;
     private FirebaseAuth mauth;
     CardView welcome;
     float v = 0;
@@ -117,14 +116,18 @@ public class LoginTabFragment extends Fragment {
     }
 
     private void SignIn() {
-        dialoglogin = new Progress(getActivity());
-        dialoglogin.light("Logging you in!");
+        MaterialAlertDialogBuilder dialogBuilder = new MaterialAlertDialogBuilder(getContext());
+        dialogBuilder.setView(R.layout.progress_material)
+                .setCancelable(false).create();
+
+        AlertDialog materialDialogs = dialogBuilder.create();
+        materialDialogs.show();
 
         mauth.signInWithEmailAndPassword(email.getText().toString(), password.getText().toString())
                 .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
-                        dialoglogin.dismiss();
+                        materialDialogs.dismiss();
 
                         if(task.isSuccessful()){
                             Toast.makeText(getContext(), "Login successful", Toast.LENGTH_SHORT).show();

@@ -153,7 +153,7 @@ public class ProfileFragment extends Fragment {
 
     private void uploadImage(){
         final ProgressDialog pd = new ProgressDialog(getContext());
-        pd.setIndeterminateDrawable(getResources().getDrawable(R.drawable.ic_picture));
+        pd.setIndeterminateDrawable(getResources().getDrawable(R.drawable.icon_upload));
 
         pd.setMessage("Uploading...");
         pd.show();

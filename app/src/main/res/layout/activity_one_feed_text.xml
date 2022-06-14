@@ -21,7 +21,7 @@
         app:contentScrim="@color/ui_accent1"
         app:layout_scrollFlags="scroll|snap|exitUntilCollapsed"
         android:id="@+id/collapsing_toolbar"
-        android:background="@color/ui_accent1">
+        android:background="@color/ui_accent3">
 
         <com.ritesh.ratiolayout.RatioLinearLayout
             android:layout_width="match_parent"
@@ -45,6 +45,15 @@
             android:layout_height="?attr/actionBarSize"
             app:layout_collapseMode="pin"
             android:id="@+id/toolbar">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:padding="3dp"
+                android:background="@drawable/arrow_bg"
+                android:id="@+id/back_btn_onefeedtext"
+                android:src="@drawable/ic_arrow_back_white_24dp"
+                app:tint="@color/text_main"/>
 
         </androidx.appcompat.widget.Toolbar>
 

@@ -7,124 +7,143 @@
     android:background="@color/back_light"
     tools:context=".Fragment.ChatsFragment">
 
-    <RelativeLayout
-        android:id="@+id/grp_chat"
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/back_light"
-        android:paddingStart="20dp"
-        android:paddingTop="10dp"
-        android:paddingEnd="20dp"
-        android:paddingBottom="10dp"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/profile_image"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_centerVertical="true"
-            android:src="@drawable/fizanto_fuzz_logo" />
-
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_toEndOf="@id/profile_image"
-            android:layout_toRightOf="@id/profile_image"
-            android:orientation="vertical"
-            android:padding="10dp">
+            android:layout_gravity="center_horizontal"
+            android:background="@color/back_light"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/username"
-                android:layout_width="wrap_content"
+            <RelativeLayout
+                android:id="@+id/grp_chat"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:layout_toEndOf="@id/profile_image"
-                android:layout_toRightOf="@id/profile_image"
-                android:text="Fizanto Fuzz"
-                android:textColor="@color/text_main"
-                android:textSize="18sp" />
+                android:background="@color/back_light"
+                android:paddingStart="20dp"
+                android:paddingTop="10dp"
+                android:paddingEnd="20dp"
+                android:paddingBottom="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/profile_image"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/fizanto_fuzz_logo" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@id/profile_image"
+                    android:layout_toRightOf="@id/profile_image"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/username"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toEndOf="@id/profile_image"
+                        android:layout_toRightOf="@id/profile_image"
+                        android:text="Fizanto Fuzz"
+                        android:textColor="@color/text_main"
+                        android:textSize="18sp" />
 
 
-            <TextView
-                android:id="@+id/last_msg"
-                android:layout_width="150dp"
+                    <TextView
+                        android:id="@+id/last_msg"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/username"
+                        android:layout_marginTop="3dp"
+                        android:layout_toRightOf="@id/profile_image"
+                        android:fontFamily="@font/gsi"
+                        android:maxLines="1"
+                        android:text="Updates Group"
+                        android:textColor="@color/text_sec" />
+
+                </LinearLayout>
+
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/img_on"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_below="@id/profile_image"
+                    android:layout_marginLeft="-15dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_toEndOf="@id/profile_image"
+                    android:layout_toRightOf="@id/profile_image"
+                    android:src="@drawable/fflogowhite"
+                    android:tint="@color/ui_accent3"
+                    android:visibility="gone"
+                    app:civ_border_color="#7CB342"
+                    app:civ_border_width="10dp" />
+
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/img_off"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_below="@id/profile_image"
+                    android:layout_marginLeft="-15dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_toEndOf="@id/profile_image"
+                    android:layout_toRightOf="@id/profile_image"
+                    android:src="@drawable/fflogowhite"
+                    android:visibility="gone"
+                    app:civ_border_color="#bfbfbf"
+                    app:civ_border_width="10dp" />
+
+
+                <ImageView
+                    android:id="@+id/arrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/ic_chevron_right"
+                    app:tint="@color/ui_accent3" />
+
+            </RelativeLayout>
+
+            <com.google.android.material.divider.MaterialDivider
+                android:id="@+id/divider"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/username"
-                android:layout_marginTop="3dp"
-                android:text="All Members Group"
-                android:layout_toRightOf="@id/profile_image"
-                android:fontFamily="@font/gsi"
-                android:maxLines="1"
-                android:textColor="@color/text_sec" />
+                app:dividerColor="@color/divider"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/grp_chat" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/back_light"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/divider" />
 
         </LinearLayout>
-
-
-        <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/img_on"
-            android:layout_width="15dp"
-            android:layout_height="15dp"
-            android:layout_below="@id/profile_image"
-            android:layout_marginLeft="-15dp"
-            android:layout_marginBottom="10dp"
-            android:layout_toEndOf="@id/profile_image"
-            android:layout_toRightOf="@id/profile_image"
-            android:src="@drawable/fflogowhite"
-            android:tint="@color/ui_accent3"
-            android:visibility="gone"
-            app:civ_border_color="#7CB342"
-            app:civ_border_width="10dp" />
-
-
-        <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/img_off"
-            android:layout_width="15dp"
-            android:layout_height="15dp"
-            android:layout_below="@id/profile_image"
-            android:layout_marginLeft="-15dp"
-            android:layout_marginBottom="10dp"
-            android:layout_toEndOf="@id/profile_image"
-            android:layout_toRightOf="@id/profile_image"
-            android:src="@drawable/fflogowhite"
-            android:visibility="gone"
-            app:civ_border_color="#bfbfbf"
-            app:civ_border_width="10dp" />
-
-
-        <ImageView
-            android:id="@+id/arrow"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:layout_marginRight="10dp"
-            android:src="@drawable/ic_chevron_right"
-            app:tint="@color/ui_accent3" />
-
-    </RelativeLayout>
-
-    <com.google.android.material.divider.MaterialDivider
-        android:layout_width="match_parent"
-        android:id="@+id/divider"
-        android:layout_height="wrap_content"
-        app:dividerColor="@color/back_dark"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/grp_chat"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recycler_view"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:background="@color/back_light"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/divider" />
+    </androidx.core.widget.NestedScrollView>
 
     <!-- empty state -->
     <include

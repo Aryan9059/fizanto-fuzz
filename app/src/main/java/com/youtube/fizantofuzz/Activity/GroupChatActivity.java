@@ -2,6 +2,7 @@ package com.youtube.fizantofuzz.Activity;
 
 import android.Manifest;
 import android.annotation.SuppressLint;
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.net.Uri;
@@ -45,7 +46,6 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
-import io.github.pierry.progress.Progress;
 
 public class GroupChatActivity extends AppCompatActivity {
 
@@ -225,7 +225,9 @@ public class GroupChatActivity extends AppCompatActivity {
         if (requestCode == CropImage.CROP_IMAGE_ACTIVITY_REQUEST_CODE){
             final CropImage.ActivityResult result = CropImage.getActivityResult(data);
             if (resultCode == RESULT_OK){
-                final Progress progress = new Progress(this);
+                final ProgressDialog pd = new ProgressDialog(this);
+                pd.setIndeterminateDrawable(getResources().getDrawable(R.drawable.icon_upload));
+                pd.setMessage("Uploading...");
                 final Date currentTime = Calendar.getInstance().getTime();
                 final StorageReference storageReference = FirebaseStorage.getInstance().getReference(fuser.getUid() + currentTime.toString());
                 MaterialDialog mDialog = new MaterialDialog.Builder(this)
@@ -237,7 +239,7 @@ public class GroupChatActivity extends AppCompatActivity {
                             public void onClick(com.shreyaspatil.MaterialDialog.interfaces.DialogInterface dialogInterface, int which) {
                                 try {
                                     dialogInterface.dismiss();
-                                    progress.light("Adding Image!");
+                                    pd.show();
                                     Bitmap bmp = MediaStore.Images.Media.getBitmap(getContentResolver(), result.getUri());
                                     ByteArrayOutputStream baos = new ByteArrayOutputStream();
                                     byte[] data1 = baos.toByteArray();
@@ -254,7 +256,7 @@ public class GroupChatActivity extends AppCompatActivity {
                                             hashMap.put("root", fuser.getUid() + currentTime.toString());
                                             hashMap.put("time", (-new Date().getTime()) + "");
                                             reference.setValue(hashMap);
-                                            progress.dismiss();
+                                            pd.dismiss();
                                             reference = FirebaseDatabase.getInstance().getReference("Users").child(fuser.getUid());
 
                                             reference.addValueEventListener(new ValueEventListener() {
@@ -278,17 +280,17 @@ public class GroupChatActivity extends AppCompatActivity {
                                         @Override
                                         public void onFailure(@NonNull Exception e) {
                                             Toast.makeText(getApplicationContext(), "Failed to upload photo", Toast.LENGTH_SHORT).show();
-                                            progress.dismiss();
+                                            pd.dismiss();
                                         }
                                     });
 
                                 } catch (IOException ioException) {
                                     ioException.printStackTrace();
-                                    progress.dismiss();
+                                    pd.dismiss();
                                 }
                             }
                         })
-                        .setNegativeButton("Cancel", R.drawable.ic_outline_cancel_24, new MaterialDialog.OnClickListener() {
+                        .setNegativeButton("Cancel", R.drawable.icon_cancel, new MaterialDialog.OnClickListener() {
                             @Override
                             public void onClick(com.shreyaspatil.MaterialDialog.interfaces.DialogInterface dialogInterface, int which) {
                                 dialogInterface.dismiss();

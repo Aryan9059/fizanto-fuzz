@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    package="com.youtube.fizantofuzz">
+    xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
@@ -20,9 +19,17 @@
         android:theme="@style/AppTheme"
         tools:replace="android:label,android:theme">
         <activity
-            android:name=".Activity.Image_show"
-            android:theme="@style/Exoplayer"
+            android:name=".PrateekSinha"
+            android:theme="@style/AppTheme.NoActionBar"
             android:exported="false" />
+        <activity
+            android:name=".Activity.AryanSrivastava"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.Image_show"
+            android:exported="false"
+            android:theme="@style/Exoplayer" />
 
         <receiver
             android:name=".Widget.Widget2"

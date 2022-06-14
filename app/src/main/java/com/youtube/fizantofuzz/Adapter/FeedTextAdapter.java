@@ -2,6 +2,7 @@ package com.youtube.fizantofuzz.Adapter;
 
 import android.content.Context;
 import android.content.Intent;
+import android.text.Html;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -38,7 +39,7 @@ public class FeedTextAdapter extends RecyclerView.Adapter<FeedTextAdapter.ViewHo
     public void onBindViewHolder(@NonNull FeedTextAdapter.ViewHolder holder, int position) {
         final FeedTextList listItem = listViews.get(position);
         holder.title.setText(listItem.getTitle());
-        holder.body.setText(listItem.getText() + "....");
+        holder.body.setText(Html.fromHtml(listItem.getText()));
         holder.date.setText(listItem.getDate());
 
         if (listItem.getImage().equals("no")){

@@ -23,8 +23,8 @@
             app:popupTheme="@style/MenuStyle">
 
             <ImageView
-                android:layout_width="30dp"
-                android:layout_height="30dp"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
                 android:src="@drawable/ic_arrow_back_white_24dp"
                 app:tint="@color/ui_accent3"
                 android:id="@+id/back_mess"
@@ -71,10 +71,11 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_view"
         android:layout_width="match_parent"
-        android:visibility="gone"
         android:layout_height="match_parent"
         android:layout_above="@id/bottom"
-        android:layout_below="@id/bar_layout"/>
+        android:layout_below="@id/bar_layout"
+        android:background="@drawable/chat_ins"
+        android:backgroundTint="@color/ui_accent1" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/bottom"

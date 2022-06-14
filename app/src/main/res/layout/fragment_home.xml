@@ -77,14 +77,14 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/gsb"
                 android:paddingLeft="16dp"
-                android:text="THE CREATORS"
+                android:text="OUR TEAM"
                 android:textColor="@color/ui_accent3"
                 android:textSize="16sp" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="8dp"
+                android:layout_margin="5dp"
                 android:orientation="horizontal">
 
                 <androidx.cardview.widget.CardView
@@ -95,7 +95,7 @@
                     android:elevation="12dp"
                     app:cardBackgroundColor="@color/back_dark"
                     app:cardCornerRadius="8dp"
-                    app:cardElevation="0dp"
+                    app:cardElevation="2dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@id/card_prateek"
                     app:layout_constraintStart_toStartOf="parent"
@@ -108,14 +108,13 @@
                         android:orientation="vertical">
 
                         <ImageView
-                            android:layout_width="100dp"
-                            android:layout_height="100dp"
+                            android:layout_width="110dp"
+                            android:layout_height="110dp"
                             android:src="@drawable/aryan" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="8dp"
                             android:fontFamily="@font/gsb"
                             android:text="Aryan Srivastava"
                             android:textColor="@color/text_main"
@@ -133,7 +132,7 @@
                     android:elevation="12dp"
                     app:cardBackgroundColor="@color/back_dark"
                     app:cardCornerRadius="8dp"
-                    app:cardElevation="0dp"
+                    app:cardElevation="2dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@id/card_aryan"
@@ -146,14 +145,13 @@
                         android:orientation="vertical">
 
                         <ImageView
-                            android:layout_width="100dp"
-                            android:layout_height="100dp"
+                            android:layout_width="110dp"
+                            android:layout_height="110dp"
                             android:src="@drawable/prateek" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="8dp"
                             android:fontFamily="@font/gsb"
                             android:text="Prateek Sinha"
                             android:textColor="@color/text_main"
@@ -168,7 +166,6 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
                 android:fontFamily="@font/gsb"
                 android:paddingLeft="16dp"
                 android:text="SOCIAL LINKS"
@@ -200,7 +197,7 @@
                         android:layout_height="26dp"
                         android:layout_marginRight="5dp"
                         android:src="@drawable/twitter"
-                        ads:tint="@color/text_main" />
+                        ads:tint="@color/ui_accent3" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -208,7 +205,7 @@
                         android:fontFamily="@font/gsb"
                         android:gravity="center"
                         android:text="Twitter"
-                        android:textColor="@color/text_main"
+                        android:textColor="@color/ui_accent3"
                         android:textSize="18sp" />
 
                 </LinearLayout>
@@ -232,7 +229,7 @@
                         android:layout_height="26dp"
                         android:layout_marginRight="5dp"
                         android:src="@drawable/instagram"
-                        ads:tint="@color/text_main" />
+                        ads:tint="@color/ui_accent3" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -240,7 +237,7 @@
                         android:fontFamily="@font/gsb"
                         android:gravity="center"
                         android:text="Instagram"
-                        android:textColor="@color/text_main"
+                        android:textColor="@color/ui_accent3"
                         android:textSize="18sp" />
 
                 </LinearLayout>
@@ -265,7 +262,7 @@
                         android:layout_height="26dp"
                         android:layout_marginRight="5dp"
                         android:src="@drawable/telegram"
-                        app:tint="@color/text_main" />
+                        app:tint="@color/ui_accent3" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -273,7 +270,7 @@
                         android:fontFamily="@font/gsb"
                         android:gravity="center"
                         android:text="Telegram"
-                        android:textColor="@color/text_main"
+                        android:textColor="@color/ui_accent3"
                         android:textSize="18sp" />
 
                 </LinearLayout>
@@ -298,7 +295,7 @@
                         android:layout_height="26dp"
                         android:layout_marginRight="5dp"
                         android:src="@drawable/gmail"
-                        app:tint="@color/text_main" />
+                        app:tint="@color/ui_accent3" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -306,29 +303,145 @@
                         android:fontFamily="@font/gsb"
                         android:gravity="center"
                         android:text="Email us"
-                        android:textColor="@color/text_main"
+                        android:textColor="@color/ui_accent3"
                         android:textSize="18sp" />
 
                 </LinearLayout>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/gsb"
+                android:paddingLeft="16dp"
+                android:text="SOURCE CODE"
+                android:textColor="@color/ui_accent3"
+                android:textSize="16sp" />
+
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="15dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginRight="15dp"
-                android:layout_marginBottom="15dp"
-                android:elevation="@dimen/_8dp"
+                android:layout_margin="13dp"
+                app:cardElevation="2dp"
                 app:cardBackgroundColor="@color/back_dark"
-
-                app:cardCornerRadius="12dp"/>
+                app:cardCornerRadius="8dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="80dp"
-                android:orientation="vertical" />
+                android:layout_height="wrap_content"
+                android:padding="12dp"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="We would love to announce that our Fizanto Fuzz App is now public! This means that you can view and help us improve our app's source code. The Fizanto Fuzz app follows an Open Source Infrastructure, which means we welcome fellow developers help us improve and add features to our app. To redirect to our Github page, click the button below."
+                    android:textColor="@color/text_main"
+                    android:textSize="15sp"/>
+
+                <LinearLayout
+                    android:id="@+id/github_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:background="@drawable/button_background"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="8dp">
+
+                    <ImageView
+                        android:layout_width="26dp"
+                        android:layout_height="26dp"
+                        android:layout_marginRight="5dp"
+                        android:src="@drawable/icon_github"
+                        ads:tint="@color/ui_accent1" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/gsb"
+                        android:gravity="center"
+                        android:text="Github Page"
+                        android:textColor="@color/ui_accent1"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/gsb"
+                android:paddingLeft="16dp"
+                android:text="SHARE OUR APP"
+                android:textColor="@color/ui_accent3"
+                android:textSize="16sp" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="13dp"
+                app:cardElevation="2dp"
+                app:cardBackgroundColor="@color/back_dark"
+                app:cardCornerRadius="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="12dp"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Since we are incapable of paying huge amounts on advertisemnet of the app, we depend on our loving community to support and spread the app so that it could reach more people. Therefore, we request you to take a minute and share our app to whoever you know and finds our app useful and entertaining."
+                        android:textColor="@color/text_main"
+                        android:textSize="15sp"/>
+
+                    <LinearLayout
+                        android:id="@+id/share_our_app_btn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="14dp"
+                        android:background="@drawable/button_background"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="8dp">
+
+                        <ImageView
+                            android:layout_width="26dp"
+                            android:layout_height="26dp"
+                            android:layout_marginRight="5dp"
+                            android:src="@drawable/icon_share"
+                            ads:tint="@color/ui_accent1" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/gsb"
+                            android:gravity="center"
+                            android:text="Share Our App"
+                            android:textColor="@color/ui_accent1"
+                            android:textSize="18sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/gsb"
+                android:paddingLeft="16dp"
+                android:text=""
+                android:textColor="@color/ui_accent3"
+                android:textSize="16sp" />
 
         </LinearLayout>
 

@@ -5,24 +5,24 @@
     <item
         android:id="@+id/bottom_home"
         android:title="Home"
-        android:icon="@drawable/round_home_24"
+        android:icon="@drawable/bottom_home"
         />
 
     <item
         android:id="@+id/bottom_videos"
         android:title="Videos"
-        android:icon="@drawable/round_video_library_24"
+        android:icon="@drawable/bottom_videos"
         />
 
     <item
         android:id="@+id/bottom_chats"
         android:title="Chats"
-        android:icon="@drawable/round_question_answer_24" />
+        android:icon="@drawable/bottom_chat" />
 
     <item
         android:id="@+id/bottom_feeds"
         android:title="Feeds"
-        android:icon="@drawable/round_feed_24"
+        android:icon="@drawable/bottom_news"
         />
 
 </menu>

@@ -62,7 +62,7 @@ public class AppCommentAdapter extends RecyclerView.Adapter<AppCommentAdapter.Vi
                                     dialogInterface.dismiss();
                                     Toast.makeText(context, "Deleted successfully", Toast.LENGTH_SHORT).show();
                                 }
-                            }).setNegativeButton("Cancel", R.drawable.ic_outline_cancel_24, new MaterialDialog.OnClickListener() {
+                            }).setNegativeButton("Cancel", R.drawable.icon_cancel, new MaterialDialog.OnClickListener() {
                                 @Override
                                 public void onClick(DialogInterface dialogInterface, int which) {
                                     dialogInterface.dismiss();

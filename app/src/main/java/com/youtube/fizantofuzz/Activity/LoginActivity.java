@@ -35,7 +35,7 @@ public class LoginActivity extends AppCompatActivity {
                         LoginActivity.super.onBackPressed();
                     }
                 })
-                .setNegativeButton("No", R.drawable.ic_outline_cancel_24, new MaterialDialog.OnClickListener() {
+                .setNegativeButton("No", R.drawable.icon_cancel, new MaterialDialog.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int which) {
                         dialogInterface.dismiss();

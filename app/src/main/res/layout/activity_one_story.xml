@@ -31,17 +31,19 @@
         android:background="@drawable/play_back"
         android:padding="5dp"
         android:visibility="gone"
-        android:src="@drawable/exo_icon_play"
+        app:tint="#fff"
+        android:src="@drawable/icon_play"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:background="@drawable/exoplayer_gradient"
+        android:layout_height="260dp"
+        android:gravity="bottom"
+        android:background="@drawable/stories_gradient"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -52,50 +54,55 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
-            android:layout_marginTop="20dp"
             android:layout_marginRight="40dp"
             android:fontFamily="@font/gsb"
+            android:layout_marginBottom="16dp"
             android:text=""
             android:textColor="#fff"
-            android:textSize="23sp" />
+            android:textSize="23sp"
+            app:layout_constraintBottom_toTopOf="@+id/exo_card"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
 
         <TextView
             android:id="@+id/exo_date"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
-            android:layout_marginTop="5dp"
             android:layout_marginRight="20dp"
             android:text=""
             android:textColor="#A6A6A6"
-            android:textSize="16sp" />
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/exo_card"
+            app:layout_constraintEnd_toStartOf="@+id/exo_card"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/exo_card" />
 
-    </LinearLayout>
-
-    <androidx.cardview.widget.CardView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:cardBackgroundColor="#fff"
-        app:cardCornerRadius="5dp"
-        android:visibility="gone"
-        android:id="@+id/exo_card"
-        android:layout_marginBottom="20dp"
-        android:layout_marginRight="20dp"
-        app:cardElevation="0dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
-
-        <TextView
+        <androidx.cardview.widget.CardView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text=""
-            android:id="@+id/text_time"
-            android:layout_margin="5dp"
-            android:textColor="#1C1C1C"
-            android:fontFamily="@font/gsr"
-            android:textSize="13sp"/>
+            app:cardBackgroundColor="#fff"
+            app:cardCornerRadius="5dp"
+            android:id="@+id/exo_card"
+            android:layout_marginBottom="20dp"
+            android:layout_marginRight="20dp"
+            app:cardElevation="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
 
-    </androidx.cardview.widget.CardView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Loading..."
+                android:id="@+id/text_time"
+                android:layout_margin="5dp"
+                android:textColor="#1C1C1C"
+                android:fontFamily="@font/gsr"
+                android:textSize="13sp"/>
+
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -113,6 +120,8 @@
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:layout_margin="12dp"
+        android:padding="3dp"
+        android:background="@drawable/stories_arrow_back"
         android:src="@drawable/ic_arrow_back_white_24dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"

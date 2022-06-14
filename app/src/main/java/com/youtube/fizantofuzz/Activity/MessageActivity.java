@@ -209,6 +209,7 @@ public class MessageActivity extends AppCompatActivity {
         hashMap.put("name", username_str);
         hashMap.put("type", "0");
         hashMap.put("root", fuser.getUid() + currentTime.toString());
+        hashMap.put("imgname", "null");
 
         reference.setValue(hashMap);
 
@@ -368,15 +369,15 @@ public class MessageActivity extends AppCompatActivity {
     }
 
     private void uploadImage(){
+        final Date currentTime = Calendar.getInstance().getTime();
         final ProgressDialog pd = new ProgressDialog(this);
-        pd.setIndeterminateDrawable(getResources().getDrawable(R.drawable.ic_picture));
+        pd.setIndeterminateDrawable(getResources().getDrawable(R.drawable.icon_upload));
         pd.setMessage("Uploading...");
         pd.show();
 
         if (imageUri != null){
             storageReference = FirebaseStorage.getInstance().getReference("uploads");
-            final StorageReference fileReference = storageReference.child(System.currentTimeMillis()
-                    +"."+getFileExtension(imageUri));
+            final StorageReference fileReference = storageReference.child(fuser.getUid() + currentTime.toString() + "."+getFileExtension(imageUri));
 
             uploadTask = fileReference.putFile(imageUri);
             uploadTask.continueWithTask(new Continuation<UploadTask.TaskSnapshot, Task<Uri>>() {
@@ -394,7 +395,6 @@ public class MessageActivity extends AppCompatActivity {
                     if (task.isSuccessful()){
                         Uri downloadUri = task.getResult();
                         mUri = downloadUri.toString();
-                        final Date currentTime = Calendar.getInstance().getTime();
                         String time = String.valueOf(System.currentTimeMillis());
                         DatabaseReference reference = FirebaseDatabase.getInstance().getReference("Chats").child(fuser.getUid() + currentTime.toString());
                         HashMap<String, Object> hashMap = new HashMap<>();
@@ -407,6 +407,8 @@ public class MessageActivity extends AppCompatActivity {
                         hashMap.put("name", username_str);
                         hashMap.put("type", "1");
                         hashMap.put("root", fuser.getUid() + currentTime.toString());
+                        hashMap.put("imgname", fuser.getUid() + currentTime.toString() + "."+getFileExtension(imageUri));
+
                         reference.setValue(hashMap);
                         reference = FirebaseDatabase.getInstance().getReference("Users").child(fuser.getUid());
                         reference.addValueEventListener(new ValueEventListener() {
