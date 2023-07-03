@@ -1,4 +1,3 @@
 # fizanto-fuzz
-The official Android app for Fizanto Fuzz YouTube channel
-This Repository contains the source code of the Fizanto Fuzz App. This means you can freely usew the source code in your own projects and also can push a request to make some edits in the source code.
-The app follows FOSS model.
+The Official Android app for Fizanto Fuzz YouTube channel
+This Repository contains the source code of the Fizanto Fuzz App. This project is licensed under MIT License which means you can use, modify and duplicate codes of the project in any way.
