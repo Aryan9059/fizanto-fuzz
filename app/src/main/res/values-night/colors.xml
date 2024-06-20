@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="dial">#4c2520</color>
+    <color name="hour">#ba837b</color>
+    <color name="minute">#ffdad5</color>
+    <color name="second">#ffdbcc</color>
+    <color name="time">#82524b</color>
+    <color name="launcher_fg">#ffb1c1</color>
+    <color name="launcher_bg">#403134</color>
+</resources>

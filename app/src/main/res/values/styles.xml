@@ -1,0 +1,86 @@
+<resources>
+    <style name="Theme.HomeScreen" parent="android:Theme.DeviceDefault.Light.NoActionBar.Fullscreen">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="colorPrimary">#ffffff</item>
+    </style>
+
+    <style name="Exoplayer" parent="Theme.Material3.Light.NoActionBar">
+        <item name="android:colorPrimaryDark">#000000</item>
+    </style>
+
+    <style name="FullScreenDialog" parent="Theme.Material3.DayNight.Dialog">
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:statusBarColor">#00000000</item>
+        <item name="android:windowBackground">?attr/screen_background</item>
+        <item name="actionMenuTextColor">?attr/button_background</item>
+        <item name="android:navigationBarColor">?attr/screen_background</item>
+        <item name="colorAccent">?attr/button_background</item>
+        <item name="colorPrimary">?attr/button_background</item>
+        <item name="colorPrimaryDark">?attr/button_background</item>
+    </style>
+
+    <style name="DialogAnim">
+        <item name="android:windowEnterAnimation">@anim/slide_in_bottom</item>
+        <item name="android:windowExitAnimation">@anim/slide_out_bottom</item>
+    </style>
+
+    <style name="Theme.App" parent="Theme.Material3.Light.NoActionBar">
+        <item name="bottomNavigationStyle">@style/Widget.App.BottomNavigationView</item>
+        <item name="colorSurface">?attr/bar_background</item>
+        <item name="colorOnSurfaceVariant">?attr/bar_ui</item>
+    </style>
+
+    <style name="Widget.App.BottomNavigationView" parent="Widget.Material3.BottomNavigationView">
+        <item name="materialThemeOverlay">@style/ThemeOverlay.App.BottomNavigationView</item>
+    </style>
+
+    <style name="ThemeOverlay.App.BottomNavigationView" parent="">
+        <item name="colorSurface">?attr/bar_background</item>
+        <item name="colorOnSurfaceVariant">?attr/bar_ui</item>
+        <item name="itemActiveIndicatorStyle">
+            @style/Widget.Material3.BottomNavigationView.ActiveIndicator
+        </item>
+    </style>
+
+    <style name="CollapsingToolbarStyle">
+        <item name="fontFamily">@font/custom_font</item>
+    </style>
+
+    <style name="CollapsingToolbarStyleMini">
+        <item name="fontFamily">@font/custom_font</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="Widget.Material3.BottomNavigationView.ActiveIndicator" parent="">
+        <item name="android:width">@dimen/m3_bottom_nav_item_active_indicator_width</item>
+        <item name="android:height">@dimen/m3_bottom_nav_item_active_indicator_height</item>
+        <item name="marginHorizontal">@dimen/m3_bottom_nav_item_active_indicator_margin_horizontal
+        </item>
+        <item name="shapeAppearance">
+            @style/ShapeAppearance.Material3.NavigationBarView.ActiveIndicator
+        </item>
+        <item name="android:color">?attr/bar_ui</item>
+    </style>
+
+    <style name="clock">
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">fill_parent</item>
+    </style>
+
+    <style name="alarm_alert" parent="@android:style/Theme.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+    <style name="Widget.FizantoFuzz.AppWidget.Container" parent="android:Widget">
+        <item name="android:id">@android:id/background</item>
+        <item name="android:background">?android:attr/colorBackground</item>
+    </style>
+
+    <style name="Widget.FizantoFuzz.AppWidget.InnerView" parent="android:Widget">
+        <item name="android:background">?android:attr/colorBackground</item>
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+    </style>
+
+</resources>

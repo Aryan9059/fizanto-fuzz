@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="end"
+    android:layout_gravity="end"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:orientation="vertical"
+        android:layout_marginBottom="4dp"
+        android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:layout_gravity="end"
+        android:layout_marginRight="8dp"
+        android:background="@drawable/background_right"
+        android:orientation="vertical"
+        android:id="@+id/linearLayout_sender">
+
+        <TextView
+            android:id="@+id/usermessagechat"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="4dp"
+            android:layout_height="wrap_content"
+            android:textColorLink="?attr/bar_background"
+            android:autoLink="all"
+            android:textColor="?attr/screen_background"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/time_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="4dp"
+            android:layout_gravity="right"
+            android:layout_marginTop="4dp"
+            android:textColor="?attr/ui_background"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

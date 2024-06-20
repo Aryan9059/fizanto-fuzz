@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_height="wrap_content">
+
+    <com.ritesh.ratiolayout.RatioLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="24dp"
+        app:fixed_attribute="WIDTH"
+        app:horizontal_ratio="16"
+        app:vertical_ratio="9">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:cardElevation="0dp"
+            app:strokeColor="?attr/bar_background"
+            app:cardBackgroundColor="?attr/ui_background"
+            app:cardCornerRadius="28dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/easter_egg"
+                android:layout_height="match_parent"/>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </com.ritesh.ratiolayout.RatioLinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="16dp"
+        android:text="This is the 5th release of the Fizanto Fuzz app and we have named this version after a famous dessert originated in Spain. The next letter is F, keep guessing what will be the next version name!"
+        android:textColor="?attr/secondary_text"
+        android:textSize="14sp" />
+
+</LinearLayout>

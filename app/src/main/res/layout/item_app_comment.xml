@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/app_comment_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="0dp"
+        app:cardBackgroundColor="?attr/screen_background"
+        app:cardCornerRadius="0dp">
+
+        <LinearLayout
+            android:id="@+id/parent_comment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ripple_screen"
+            android:orientation="horizontal">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/app_user_thumbnail"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:src="@drawable/default_profile_picture"
+                android:layout_margin="8dp"
+                 />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="8dp">
+
+                <TextView
+                    android:id="@+id/app_user_username"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Username"
+                    android:layout_marginTop="8dp"
+                    android:textColor="?attr/main_text"
+                    android:textSize="18sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/verify_comment"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginLeft="3dp"
+                    android:visibility="gone"
+                    android:src="@drawable/ic_baseline_verification_24"
+                    app:layout_constraintTop_toTopOf="@id/app_user_username"
+                    app:layout_constraintBottom_toBottomOf="@+id/app_user_username"
+                    app:layout_constraintStart_toEndOf="@+id/app_user_username"
+                    app:tint="?attr/button_background" />
+
+                <TextView
+                    android:id="@+id/app_comment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="Comment"
+                    android:textColor="?attr/main_text"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/app_user_username" />
+
+                <TextView
+                    android:id="@+id/textView8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Via App"
+                    android:textColor="?attr/secondary_text"
+                    android:textSize="12sp"
+                    android:layout_marginBottom="8dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/app_comment" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+</androidx.cardview.widget.CardView>
+
+</LinearLayout>

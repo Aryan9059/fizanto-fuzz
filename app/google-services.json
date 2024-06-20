@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "543198820946",
+    "firebase_url": "https://fizanto-fuzz.firebaseio.com",
+    "project_id": "fizanto-fuzz",
+    "storage_bucket": "fizanto-fuzz.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:543198820946:android:a4f33697ae504ce1d0fd8b",
+        "android_client_info": {
+          "package_name": "com.youtube.fizantofuzz"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "543198820946-ll4gsvch539i3etmioa7ck8h48dfrcfk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.youtube.fizantofuzz",
+            "certificate_hash": "88cdaf1630fae2ef216f1df239721eb959bc96f8"
+          }
+        },
+        {
+          "client_id": "543198820946-hhsfpm3407tjp8qvunhvjg5j33kgpshl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAtNRZ_EGKdx8yz-Sbn8LzSrWsxdfcicrE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "543198820946-hhsfpm3407tjp8qvunhvjg5j33kgpshl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

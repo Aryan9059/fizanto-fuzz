@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/bottom_home"
+        android:title="Home"
+        android:icon="@drawable/bottom_home"
+        />
+
+    <item
+        android:id="@+id/bottom_videos"
+        android:title="Videos"
+        android:icon="@drawable/bottom_videos"
+        />
+
+    <item
+        android:id="@+id/bottom_chats"
+        android:title="Chats"
+        android:icon="@drawable/bottom_chats" />
+
+    <item
+        android:id="@+id/bottom_feeds"
+        android:title="Feeds"
+        android:icon="@drawable/bottom_feeds"
+        />
+
+</menu>

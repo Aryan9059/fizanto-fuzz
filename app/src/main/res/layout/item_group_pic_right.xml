@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="right"
+    android:gravity="right"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:layout_marginRight="8dp"
+        android:longClickable="true"
+        android:orientation="vertical">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="210dp"
+            android:layout_height="210dp"
+            app:cardCornerRadius="24dp"
+            app:cardElevation="0dp"
+            app:strokeColor="?attr/bar_ui"
+            app:cardBackgroundColor="?attr/bar_ui"
+            >
+
+        <ImageView
+            android:id="@+id/usermessagechat_img"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:transitionName="image_show"
+            android:scaleType="centerCrop"
+            android:adjustViewBounds="true"
+            android:visibility="gone"
+            />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_gravity="right|bottom"
+                app:cardCornerRadius="16dp"
+                android:layout_margin="8dp"
+                app:cardElevation="0dp"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="?attr/bar_ui">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="3dp"
+                    android:paddingBottom="4dp"
+                    android:paddingHorizontal="8dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/time_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:textColor="?attr/ui_background"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/txt_seen"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:textColor="?attr/ui_background"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+
+
+</LinearLayout>
